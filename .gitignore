@@ -1,0 +1,8 @@
+.venv
+env*.sh
+__pycache__
+*.log
+*.xml
+*.mrc
+*.json
+*.csv
