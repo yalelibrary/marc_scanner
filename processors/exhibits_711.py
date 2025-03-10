@@ -48,3 +48,6 @@ class Exhibits711(BaseProcessor):
                         self.reporter.write_record('exhibits.mrc', record)
                     else:
                         self.reporter.add_count('711 without Exhibit in $i')
+                        subfield_ts = field711.get_subfields('t')
+                        if subfield_ts:
+                            self.reporter.write_line('711-subt.tsv', [record_id(record), field711])

@@ -15,6 +15,8 @@ def configure_report_logging(filename):
     logger.setLevel('INFO')
     fh_info = logging.FileHandler(filename)
     logger.addHandler(fh_info)
+    console_handler = logging.StreamHandler()
+    logger.addHandler(console_handler)
 
 
 def create_writer(filename):

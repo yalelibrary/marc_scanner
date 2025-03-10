@@ -77,7 +77,7 @@ File creation and close is handled by the reporter.
 `Reporter.write_line(<filename>, <array>)` will join the array with TABs and write it to the file.
 
 #### Writing to MARC Files
-`Reporter.write_marc(<filename>, <pymarc record>)` write a MARC record to the file. The type of MARC file is determined by the filename's extension.
+`Reporter.write_record(<filename>, <pymarc record>)` write a MARC record to the file. The type of MARC file is determined by the filename's extension.
 See the [./processors/as_marc.py](./processors/as_marc.py) example Processor.
 
 ### Collecting Statistics

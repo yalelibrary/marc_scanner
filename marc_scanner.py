@@ -54,7 +54,6 @@ class Scanner:
         for a, module_name, b in iter_modules(processor_directories):
             prefix = os.path.relpath(a.path, root).replace(os.sep, '.')
             module = import_module(f'{prefix}.{module_name}')
-            print(module)
             for attribute_name in [attribute_name for attribute_name in dir(module) if attribute_name in processor_names]:
                 attribute = getattr(module, attribute_name)
                 if (
